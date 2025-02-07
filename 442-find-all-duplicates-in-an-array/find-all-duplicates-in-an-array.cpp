@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> findDuplicates(vector<int>& nums) {
-       map<int,int> mep;
+       unordered_map<int,int> mep;
      
        int x=0;
        vector<int> v;
