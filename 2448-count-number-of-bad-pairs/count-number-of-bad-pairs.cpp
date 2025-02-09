@@ -3,7 +3,7 @@ public:
     long long countBadPairs(vector<int>& nums) {
         
         long int good=0;
-        map<int ,int> mep;
+        unordered_map<int ,int> mep;
 
         for(int i=0;i<nums.size();i++)
         {
