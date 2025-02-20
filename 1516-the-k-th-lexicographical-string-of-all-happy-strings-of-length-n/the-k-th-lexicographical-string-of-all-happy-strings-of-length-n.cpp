@@ -3,7 +3,9 @@ public:
     string getHappyString(int n, int k) {
         int sz=3*(1<<(n-1));
         if (k>sz) return "";
-        auto [q, r]=div(k-1, 1<<(n-1));// k-1
+        auto [q, r]=div(k-1, 1<<(n-1));
+        
+        
         string s(n, ' ');
         s[0]='a'+q;
         bitset<9> bin(r);
