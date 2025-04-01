@@ -18,7 +18,7 @@ while(st<=ed)
         else{ed--;continue;}
 
     }
-    else if(tolow(s[st])!= tolow(s[ed]))
+    else if(tolower(s[st])!= tolower(s[ed]))
     {
         return 0;
     }
