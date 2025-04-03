@@ -37,8 +37,8 @@ public:
       long long mx=0;
         for(int i=1;i<s-1;i++)
         {   
-            long long sub=(left[i-1]-nums[i]);
-            long long sum=sub*right[i+1];
+            
+            long long sum=(left[i-1]-nums[i])*right[i+1];
            
             if(sum>mx){ mx=sum;}
            
