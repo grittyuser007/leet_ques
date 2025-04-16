@@ -2,26 +2,20 @@ class Solution {
 public:
     string removeDuplicates(string s) {
         
-      stack<char> s1;
-      char mem;
-      string ss;
-      s1.push(s[0]);
-      for(int i=1;i<s.length();i++)
+      string s1="";
+
+      for(auto c:s)
       {
-       if(!s1.empty() && s[i]==s1.top())
+       if(s1.size() && c==s1.back())
        {
-        s1.pop();
+        s1.pop_back();
        }
        else{
-        s1.push(s[i]);
+        s1.push_back(c);
      
        }
+      
       }
-      while(!s1.empty())
-      {
-   ss=s1.top()+ss;
-   s1.pop();
-      }
-      return ss;
-    }
+       return s1;
+    }  
 };
