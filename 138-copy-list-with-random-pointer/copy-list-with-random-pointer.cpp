@@ -42,7 +42,7 @@ public:
   }
   orig=head;
   Node *temp=cloneHead;
-unordered_map<Node*,Node*>mapp;
+map<Node*,Node*>mapp;
  while(orig!=NULL && temp!=NULL)
  {
     mapp[orig]=temp;
