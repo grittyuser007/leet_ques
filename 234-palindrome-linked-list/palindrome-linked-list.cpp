@@ -13,21 +13,21 @@ public:
     bool isPalindrome(ListNode* head) {
       ListNode *start=head;
         
-       stack<int> st;
+       vector<int> st;
         if(head==NULL || head->next==NULL){return true;}
       
       while(start!=NULL)
       {
-        st.push(start->val);
+        st.push_back(start->val);
         start=start->next;
       }
       start=head;
       while(start!=NULL)
       {
-        if(st.top()==start->val)
+        if(st.back()==start->val)
         {
             start=start->next;
-            st.pop();
+            st.pop_back();
             continue;
         }
         else
