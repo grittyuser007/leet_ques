@@ -15,27 +15,12 @@ public:
         ListNode* slow=head;
         if(head==NULL || head->next==NULL){return  head;}
         
-        while(true)
-        {   
-           
-            if(fast->next==NULL)
-            {
-             return slow;
-            }
+        while(fast!=NULL && fast->next!=NULL)
+        {
+            slow=slow->next;
+            fast=fast->next->next;
 
-            else
-            {
-                fast=fast->next;
-                if(fast->next)
-                {
-                    fast=fast->next;
-                }
-                else
-                {
-                    return slow->next;
-                }
-            }
-             slow=slow->next;
         }
+        return slow;
     }
 };
