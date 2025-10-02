@@ -1,21 +1,15 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-     int num=nums.size();
-       sort(nums.begin(),nums.end());
-   for(int i=0;i<num;i++)
-   {
-    if(i==nums[i])
+    int num1=0;
+    int num2=0;
+
+    for(int i=0;i<nums.size();i++)
     {
-        continue;
+        num1=num1^(i+1);
+        num2=num2^nums[i];
     }
-    else
-    {
-        return i;
-    }
-   }
-   if(nums[num-1]!=num) 
-   {return num;}
-return 0;
+    return num1^num2;
+    
     }
 };
