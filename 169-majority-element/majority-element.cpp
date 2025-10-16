@@ -27,7 +27,7 @@ public:
         cnt--;
        
        }
-      cout<<num<<cnt;
+      
     }
     return num;
 
