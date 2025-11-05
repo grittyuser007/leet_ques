@@ -16,7 +16,7 @@ public:
                 return true;
             }
             st.push(s);
-            cout<<s;
+            
         }
         return false;
     }
